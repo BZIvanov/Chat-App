@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { ExitToApp } from '@mui/icons-material';
 import {
   Toolbar,
   List,
@@ -15,6 +14,7 @@ import {
   Typography,
   CircularProgress,
 } from '@mui/material';
+import { ExitToAppIcon } from '../icons';
 import { UserAvatar } from '../../components/UserAvatar';
 import { signoutAction } from '../../redux/features/user/user-slice';
 import { DRAWER_WIDTH } from '../../constants';
@@ -36,7 +36,7 @@ const MessagesDrawer = ({
           Chat
         </Typography>
         <IconButton onClick={() => dispatch(signoutAction())}>
-          <ExitToApp color="secondary" />
+          <ExitToAppIcon color="secondary" />
         </IconButton>
       </Toolbar>
       <Divider />

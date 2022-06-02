@@ -1,5 +1,5 @@
-import { Menu } from '@mui/icons-material';
 import { Typography, Toolbar, IconButton, Box, AppBar } from '@mui/material';
+import { MenuIcon } from '../icons';
 import { DRAWER_WIDTH } from '../../constants';
 
 const MessagesAppBar = ({ selectedUser, handleDrawerToggle }) => {
@@ -20,7 +20,7 @@ const MessagesAppBar = ({ selectedUser, handleDrawerToggle }) => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <Menu />
+            <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             {selectedUser
