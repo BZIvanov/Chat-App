@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
-import { Send } from '@mui/icons-material';
+import { SendIcon } from '../icons';
 
 const NewMessage = ({ receiverId, sendMessage }) => {
   const [text, setText] = useState('');
@@ -48,7 +48,7 @@ const NewMessage = ({ receiverId, sendMessage }) => {
           endAdornment: (
             <InputAdornment position="end">
               <IconButton type="submit">
-                <Send />
+                <SendIcon />
               </IconButton>
             </InputAdornment>
           ),
