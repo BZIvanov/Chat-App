@@ -1,0 +1,40 @@
+{
+  "name": "chat-app-backend",
+  "version": "1.0.0",
+  "description": "Simple graphql chat project.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./server.js",
+    "prod": "node ./server.js",
+    "preview-data": "npx prisma studio",
+    "lint": "eslint ."
+  },
+  "author": "BI",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.3.13",
+    "@prisma/client": "^3.14.0",
+    "apollo-server-express": "^3.8.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "graphql": "^16.5.0",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-ws": "^5.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "ws": "^8.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "2.6.2",
+    "prisma": "^3.14.0"
+  },
+  "type": "module"
+}
