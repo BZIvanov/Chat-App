@@ -1,4 +1,5 @@
 import { Avatar } from '@mui/material';
+import propTypes from './propTypes';
 
 const stringToColor = (string) => {
   let hash = 0;
@@ -30,5 +31,7 @@ const stringAvatar = (name) => {
 const UserAvatar = ({ firstName, lastName }) => {
   return <Avatar {...stringAvatar(`${firstName} ${lastName}`)} />;
 };
+
+UserAvatar.propTypes = propTypes;
 
 export default UserAvatar;

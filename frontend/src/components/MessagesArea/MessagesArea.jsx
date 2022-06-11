@@ -3,6 +3,7 @@ import { DateTime } from 'luxon';
 import { MessageItem } from '../MessageItem';
 import { NewMessage } from '../NewMessage';
 import { DRAWER_WIDTH } from '../../constants';
+import propTypes from './propTypes';
 
 const MessagesArea = ({ id, messages, sendMessage }) => {
   return (
@@ -54,5 +55,7 @@ const MessagesArea = ({ id, messages, sendMessage }) => {
     </Box>
   );
 };
+
+MessagesArea.propTypes = propTypes;
 
 export default MessagesArea;

@@ -18,6 +18,7 @@ import { ExitToAppIcon } from '../icons';
 import { UserAvatar } from '../../components/UserAvatar';
 import { signoutAction } from '../../redux/features/user/user-slice';
 import { DRAWER_WIDTH } from '../../constants';
+import propTypes from './propTypes';
 
 const MessagesDrawer = ({
   users = [],
@@ -116,5 +117,7 @@ const MessagesDrawer = ({
     </Box>
   );
 };
+
+MessagesDrawer.propTypes = propTypes;
 
 export default MessagesDrawer;

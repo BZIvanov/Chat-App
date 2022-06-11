@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import { validationSchema, defaultValues } from './schema';
 import { FormTextField } from '../FormTextField';
+import propTypes from './propTypes';
 
 const SigninForm = ({ signin, loading, error }) => {
   const { control, handleSubmit } = useForm({
@@ -62,5 +63,7 @@ const SigninForm = ({ signin, loading, error }) => {
     </Box>
   );
 };
+
+SigninForm.propTypes = propTypes;
 
 export default SigninForm;
