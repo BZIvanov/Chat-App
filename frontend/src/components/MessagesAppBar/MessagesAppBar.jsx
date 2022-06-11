@@ -1,6 +1,7 @@
 import { Typography, Toolbar, IconButton, Box, AppBar } from '@mui/material';
 import { MenuIcon } from '../icons';
 import { DRAWER_WIDTH } from '../../constants';
+import propTypes, { defaultPropTypes } from './propTypes';
 
 const MessagesAppBar = ({ selectedUser, handleDrawerToggle }) => {
   return (
@@ -32,5 +33,9 @@ const MessagesAppBar = ({ selectedUser, handleDrawerToggle }) => {
     </Box>
   );
 };
+
+MessagesAppBar.propTypes = propTypes;
+
+MessagesAppBar.defaultProps = defaultPropTypes;
 
 export default MessagesAppBar;

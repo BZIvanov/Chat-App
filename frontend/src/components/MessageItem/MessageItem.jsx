@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Typography, ListItem, ListItemText } from '@mui/material';
+import propTypes from './propTypes';
 
 const MessageItem = ({ text, sentDate, daysAgo, textAlign }) => {
   const messageBoxRef = useRef(null);
@@ -25,5 +26,7 @@ const MessageItem = ({ text, sentDate, daysAgo, textAlign }) => {
     </ListItem>
   );
 };
+
+MessageItem.propTypes = propTypes;
 
 export default MessageItem;

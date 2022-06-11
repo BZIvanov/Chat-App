@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, TextField, IconButton, InputAdornment } from '@mui/material';
 import { SendIcon } from '../icons';
+import propTypes from './propTypes';
 
 const NewMessage = ({ receiverId, sendMessage }) => {
   const [text, setText] = useState('');
@@ -57,5 +58,7 @@ const NewMessage = ({ receiverId, sendMessage }) => {
     </Box>
   );
 };
+
+NewMessage.propTypes = propTypes;
 
 export default NewMessage;

@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import propTypes from './propTypes';
 
 const ProtectedRoute = ({ isAllowed, redirectPath = '/', children }) => {
   if (!isAllowed) {
@@ -7,5 +8,7 @@ const ProtectedRoute = ({ isAllowed, redirectPath = '/', children }) => {
 
   return children ? children : <Outlet />;
 };
+
+ProtectedRoute.propTypes = propTypes;
 
 export default ProtectedRoute;

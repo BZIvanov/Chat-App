@@ -1,5 +1,6 @@
 import { Controller } from 'react-hook-form';
 import { FormControl, TextField } from '@mui/material';
+import propTypes from './propTypes';
 
 const FormTextField = ({ name, label, type = 'text', control }) => {
   return (
@@ -22,5 +23,7 @@ const FormTextField = ({ name, label, type = 'text', control }) => {
     />
   );
 };
+
+FormTextField.propTypes = propTypes;
 
 export default FormTextField;

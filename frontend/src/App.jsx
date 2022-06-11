@@ -13,11 +13,11 @@ const App = () => {
   return (
     <Routes>
       <Route index={true} element={<Home />}></Route>
-      <Route element={<ProtectedRoute isAllowed={!user} />}>
+      <Route element={<ProtectedRoute isAllowed={Boolean(!user)} />}>
         <Route path="signup" element={<Signup />} />
         <Route path="signin" element={<Signin />} />
       </Route>
-      <Route element={<ProtectedRoute isAllowed={user} />}>
+      <Route element={<ProtectedRoute isAllowed={Boolean(user)} />}>
         <Route path="chat" element={<Chat />}>
           <Route path=":id" element={<MessagesAreaOutlet />} />
         </Route>
