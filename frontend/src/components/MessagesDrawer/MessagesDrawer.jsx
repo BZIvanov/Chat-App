@@ -15,7 +15,7 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { ExitToAppIcon } from '../icons';
-import { UserAvatar } from '../../components/UserAvatar';
+import { UserAvatar } from '../UserAvatar';
 import { signoutAction } from '../../redux/features/user/user-slice';
 import { DRAWER_WIDTH } from '../../constants';
 import propTypes from './propTypes';

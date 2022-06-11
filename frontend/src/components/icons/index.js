@@ -1,5 +1,3 @@
-import { ExitToApp, Menu, Send } from '@mui/icons-material';
-
-export const ExitToAppIcon = (props) => <ExitToApp {...props} />;
-export const MenuIcon = (props) => <Menu {...props} />;
-export const SendIcon = (props) => <Send {...props} />;
+export { default as ExitToAppIcon } from './ExitToAppIcon';
+export { default as MenuIcon } from './MenuIcon';
+export { default as SendIcon } from './SendIcon';
