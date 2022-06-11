@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <Routes>
-      <Route index={true} element={<Home />}></Route>
+      <Route index={true} element={<Home />} />
       <Route element={<ProtectedRoute isAllowed={Boolean(!user)} />}>
         <Route path="signup" element={<Signup />} />
         <Route path="signin" element={<Signin />} />
