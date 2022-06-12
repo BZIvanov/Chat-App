@@ -22,4 +22,24 @@ describe('Home Component', () => {
     const textElement = screen.getByText(/welcome/i);
     expect(textElement).toBeInTheDocument();
   });
+
+  test('Render chat button for logged in user', () => {
+    const copiedState = {
+      ...initialState,
+      user: { ...initialState.user, token: 'usertoken' },
+    };
+    store = mockStore(copiedState);
+    render(
+      <BrowserRouter>
+        <Provider store={store}>
+          <Home />
+        </Provider>
+      </BrowserRouter>
+    );
+
+    const chatButton = screen.getByRole('link', {
+      name: /chat/i,
+    });
+    expect(chatButton).toBeInTheDocument();
+  });
 });

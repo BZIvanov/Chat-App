@@ -15,15 +15,19 @@ const MessagesAppBar = ({ selectedUser, handleDrawerToggle }) => {
       >
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="warning"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{
+              mr: 2,
+              display: { sm: 'none' },
+              filter: 'contrast(300%)',
+            }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap={true} component="div">
             {selectedUser
               ? `Chat with ${selectedUser.firstName} ${selectedUser.lastName}`
               : 'Select an user to chat with'}
